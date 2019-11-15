@@ -2,7 +2,7 @@
 NodeJS and Express frontend for Codeup Capstone Project
 
 Database Diagram:
-https://tinyurl.com/yfethb3s
+https://tinyurl.com/yfu6vlgu
 
 Workflow:
 https://tinyurl.com/qunqxb2
