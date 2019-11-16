@@ -1,14 +1,33 @@
 # SquareHelp-FrontEnd
 NodeJS and Express frontend for Codeup Capstone Project
 
-Database Diagram:
-https://tinyurl.com/yfu6vlgu
+Project planning documentation: https://github.com/SquareHelp/SquareHelp-documentation/blob/master/README.md
 
-Workflow:
-https://tinyurl.com/qunqxb2
+Run development server:
 
-Story Board: 
-https://tinyurl.com/srq5e5d
+```console
+git clone https://github.com/SquareHelp/SquareHelp-FrontEnd.git
+npm install
+npm run dev
+```
 
-Front-End Table: 
-https://docs.google.com/document/d/1anMBNfoYgHu3yEYBdBCedZwyRrDMLURPgynPgdr3rag/edit
+(Example directory tree in markdown, specific contents don't match the repo, will be modified later.)
+```
++-- _config.yml
++-- _drafts
+|   +-- begin-with-the-crazy-ideas.textile
+|   +-- on-simplicity-in-technology.markdown
++-- _includes
+|   +-- footer.html
+|   +-- header.html
++-- _layouts
+|   +-- default.html
+|   +-- post.html
++-- _posts
+|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
++-- _data
+|   +-- members.yml
++-- _site
++-- index.html
+```
