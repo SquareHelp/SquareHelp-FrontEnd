@@ -60,12 +60,16 @@ body {
   color: #fff;
 }
 
+input {
+  color: #fff;
+}
+
+/* Page Content */
+
 .wrapper {
   width: 90%;
   margin: auto;
 }
-
-/* Page Content */
 
 .nav-wrapper {
   width: 95% !important;
