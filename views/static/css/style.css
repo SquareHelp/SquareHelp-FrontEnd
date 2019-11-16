@@ -56,7 +56,18 @@ main, html, body {
 }
 
 body {
-  background-color: green;
+  background: url('../img/index-bg.png');
+  color: #fff;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
 }
 
 /* Page Content */
+
+.nav-wrapper {
+  width: 95% !important;
+  margin: auto !important;
+}
