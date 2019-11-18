@@ -27,7 +27,8 @@ resetBtn.addEventListener("click", function(e) {
 
 const submitWasClicked = () => {
   (verbose) ? console.log("submitWasClicked function was ran") : "";
-  axios.get('/js/login/login-sampleResponse.json')
+  // axios.get('/js/login/login-sampleResponse.json')
+  axios.get('http://localhost:8080/api/login')
   .then((res) => login = res);
 };
 
