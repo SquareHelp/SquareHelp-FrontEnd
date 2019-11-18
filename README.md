@@ -12,6 +12,7 @@ npm run dev
 ```
 to exit: 
 ```control + c
+```
 
 
 
