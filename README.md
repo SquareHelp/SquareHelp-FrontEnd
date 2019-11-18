@@ -11,7 +11,8 @@ npm install
 npm run dev
 ```
 to exit: 
-```control + c
+```console
+control + c
 ```
 
 
