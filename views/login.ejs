@@ -7,7 +7,7 @@
   <h1>Login page</h1>
 
   <div class="formWrapper">
-    <form class="col s12" action="https://request-inspector.glitch.me/" method="POST">
+    <div class="col s12">
       <div class="row">
         <div class="input-field col s6">
           <label for="username">Username</label>
@@ -22,13 +22,19 @@
         </div>
       </div>
       <div class="row">
-        <button class="btn waves-effect waves-light grey darken-4" type="submit">Submit<i class="material-icons right">send</i></button>
+        <button class="btn waves-effect waves-light grey darken-4" id="submit" onclick="submitWasClicked()">Submit<i class="material-icons right">send</i></button>
         <button class="btn waves-effect waves-light grey darken-4" type="reset" name="reset" id="reset">reset</button>
       </div>
-    </form>
+    </div>
   </div>
 
 </div>
+
+<!-- Required js files -->
+<!-- Axios -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/login/login.js"></script>
+
 <%- include('partials/footer.ejs') -%>
 
 
