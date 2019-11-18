@@ -10,13 +10,14 @@ const resetBtn = document.getElementById("reset");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 
-// Var to hold data from axios request
+// Var to hold data from axios request info
 let login;
 
 // Event Listeners
 submitBtn.addEventListener("click", function(e) {
   e.preventDefault;
   (verbose) ? console.log("submit button was clicked") : "";
+  submitWasClicked();
 });
 
 resetBtn.addEventListener("click", function(e) {
