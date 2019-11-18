@@ -10,6 +10,10 @@ git clone https://github.com/SquareHelp/SquareHelp-FrontEnd.git
 npm install
 npm run dev
 ```
+```to exit: 
+control + c
+```
+
 
 (Example directory tree in markdown, specific contents don't match the repo, will be modified later.)
 ```
