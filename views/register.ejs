@@ -1,7 +1,7 @@
 <%- include('partials/head.ejs') -%>
 <%- include('partials/navbar.ejs') -%>
 
-<title>SquareHelp - register.html</title>
+<title>SquareHelp - html</title>
 
 <link href="css/register.css" rel="stylesheet">
 
@@ -29,6 +29,7 @@
           <input id="email" type="email" name="email" class="validate">
         </div>
       </div>
+      <%- include('partials/register-cityStatesDropdown') -%>
       <div class="row">
         <div class="input-field col s6">
           <label for="dob">Date of Birth</label>
@@ -80,10 +81,15 @@
       </div>
 
       <div class="row btn-row">
-        <button class="btn waves-effect waves-light grey darken-4" type="submit">Submit<i class="material-icons right">send</i></button>
+        <button class="btn waves-effect waves-light grey darken-4" type="submit" id="submit">Submit<i class="material-icons right">send</i></button>
         <button class="btn waves-effect waves-light grey darken-4" type="reset" name="reset" id="reset">reset</button>
       </div>
     </form>
   </div>
+
+  <!-- Required js files -->
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/register/register.js"></script>
 
 <%- include('partials/footer.ejs') -%>

@@ -9,14 +9,16 @@ const submitBtn = document.getElementById("submit");
 const resetBtn = document.getElementById("reset");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
+const csrf = document.getElementById("csrf");
 
-// Var to hold data from axios request
+// Var to hold data from axios request info
 let login;
 
 // Event Listeners
 submitBtn.addEventListener("click", function(e) {
   e.preventDefault;
   (verbose) ? console.log("submit button was clicked") : "";
+  submitWasClicked();
 });
 
 resetBtn.addEventListener("click", function(e) {
@@ -27,9 +29,22 @@ resetBtn.addEventListener("click", function(e) {
 
 const submitWasClicked = () => {
   (verbose) ? console.log("submitWasClicked function was ran") : "";
-  // axios.get('/js/login/login-sampleResponse.json')
-  axios.get('http://localhost:8080/api/login')
-  .then((res) => login = res);
-};
 
-// pending completion of backend route to login controller.
+  let params = new URLSearchParams();
+  params.append("username", username.value);
+  params.append("password", password.value);
+  params.append("_csrf", csrf.value);
+
+  axios.post("http://localhost:8080/api/login", params)
+  .then((res) => login = res)
+  .then(() => {
+    if (login.data.isLoggedIn == "false") {
+      console.error("invalid login information");
+    } else {
+      console.log(login.data);
+      assignValuesToCookies();
+      window.location.href="/dashboard";
+    }
+  })
+  .catch((err) => console.log(err))
+};
