@@ -43,6 +43,7 @@ const submitWasClicked = () => {
     } else {
       console.log(login.data);
       assignValuesToCookies();
+      window.location.href="/dashboard";
     }
   })
   .catch((err) => console.log(err))
