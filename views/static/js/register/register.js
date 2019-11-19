@@ -24,7 +24,13 @@ submitBtn.addEventListener("click", function(e) {
   e.preventDefault;
   (verbose) ? console.log("submit button was clicked") : "";
   registerWasClicked();
-})
+});
+
+// Initialize dropdown
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var instances = M.Dropdown.init(elems);
+});
 
 resetBtn.addEventListener("click", function(e) {
   e.preventDefault;
@@ -40,11 +46,30 @@ resetBtn.addEventListener("click", function(e) {
   resetBtn.value = "";
 });
 
+
+
+
+
+
+
 const registerWasClicked = () => {
   (verbose) ? console.log("registerWasClicked function was ran") : "";
+
+  let params = new URLSearchParams();
+  params.append("_csrf", csrf.value);
+  params.append("username", username.value);
+  params.append("password", password.value);
+  params.append("email", email.value);
+  params.append("dob", dob.value);
+  params.append("phone", phone.value);
+  params.append("gender", gender.value);
+  params.append("dateQuitSmoking", dateQuitSmoking.value);
+  params.append("costOfCigs", costOfCigs.value);
+  params.append("city", );
+  params.append("",);
+
   axios.post('http://localhost:8080/api/register')
     .then((res) => register = res);
 }
-
 
 // Pending completion of backend route to register controller

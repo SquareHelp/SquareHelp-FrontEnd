@@ -8,3 +8,8 @@
   margin-top: 7rem;
   padding-left: .7rem;
 }
+
+.dropdown-content {
+  width: max-content !important;
+  height:auto !important;
+}
