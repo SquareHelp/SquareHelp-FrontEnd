@@ -42,9 +42,10 @@ const submitWasClicked = () => {
       console.error("invalid login information");
     } else {
       console.log(login.data);
+      assignValuesToCookies();
     }
   })
   .catch((err) => console.log(err))
 };
 
-// pending completion of backend route to login controller.
+isCookies();
