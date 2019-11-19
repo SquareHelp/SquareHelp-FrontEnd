@@ -47,5 +47,3 @@ const submitWasClicked = () => {
   })
   .catch((err) => console.log(err))
 };
-
-isCookies();
