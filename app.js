@@ -29,6 +29,7 @@ app.use('/users', r);
 app.use('/login', r);
 app.use('/register', r);
 app.use('/dashboard', r);
+app.use('/profile', r);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
