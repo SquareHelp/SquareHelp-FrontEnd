@@ -12,7 +12,10 @@ const dob = document.getElementById("dob");
 const phone = document.getElementById("phone");
 const gender = document.getElementById("genderRadioWrapper");
 const dateQuitSmoking = document.getElementById("dateQuitSmoking");
-const costOfCigs= document.getElementById("costOfCigs");
+const costOfCigs = document.getElementById("costOfCigs");
+const city = document.getElementById("city");
+const state = document.getElementById("state");
+
 const submitBtn = document.getElementById("submit");
 const resetBtn = document.getElementById("reset");
 
@@ -42,15 +45,7 @@ resetBtn.addEventListener("click", function(e) {
   gender.value = "";
   dateQuitSmoking.value = "";
   costOfCigs.value = "";
-  submitBtn.value = "";
-  resetBtn.value = "";
 });
-
-
-
-
-
-
 
 const registerWasClicked = () => {
   (verbose) ? console.log("registerWasClicked function was ran") : "";
@@ -65,8 +60,8 @@ const registerWasClicked = () => {
   params.append("gender", gender.value);
   params.append("dateQuitSmoking", dateQuitSmoking.value);
   params.append("costOfCigs", costOfCigs.value);
-  params.append("city", );
-  params.append("",);
+  params.append("city", city.value);
+  params.append("state", state.value);
 
   axios.post('http://localhost:8080/api/register')
     .then((res) => register = res);

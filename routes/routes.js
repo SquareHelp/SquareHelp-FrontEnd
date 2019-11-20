@@ -24,6 +24,11 @@ router.get('/login', function(req, res, next) {
 /* GET dashboard page. */
 router.get('/dashboard', function(req, res, next) {
   res.render('dashboard', { title: "dashboard" });
-})
+});
+
+/* GET profile page. */
+router.get('/profile', function(req, res, next) {
+  res.render('profile', { title: "profile" });
+});
 
 module.exports = router;
