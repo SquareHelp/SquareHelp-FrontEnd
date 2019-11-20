@@ -1,7 +1,7 @@
-// Enable verbose mode for development. 
+// Enable verbose mode for development.
 const verbose = true;
 
-// Verify js is loaded. 
+// Verify js is loaded.
 (verbose) ? console.log("register.js loaded") : "";
 
 // Define DOM elements
@@ -55,10 +55,10 @@ const registerWasClicked = () => {
   params.append("username", username.value);
   params.append("password", password.value);
   params.append("email", email.value);
-  params.append("dob", dob.value);
+  params.append("dob", dateToJulian(dob.value));
   params.append("phone", phone.value);
   params.append("gender", gender.value);
-  params.append("dateQuitSmoking", dateQuitSmoking.value);
+  params.append("dateQuitSmoking", dateToJulian(dateQuitSmoking.value));
   params.append("costOfCigs", costOfCigs.value);
   params.append("city", city.value);
   params.append("state", state.value);
