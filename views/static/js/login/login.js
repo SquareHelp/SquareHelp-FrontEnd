@@ -38,6 +38,7 @@ const submitWasClicked = () => {
   axios.post("http://localhost:8080/api/login", params)
   .then((res) => login = res)
   .then(() => {
+    console.log(login);
     if (login.data.isLoggedIn == "false") {
       console.error("invalid login information");
     } else {
